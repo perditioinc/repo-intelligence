@@ -82,6 +82,36 @@ huggingface/transformers: 90/100 (A)
 | GH_TOKEN | yes | - | GitHub PAT (read:repo scope) |
 | CONCURRENCY_CHECKS | no | 10 | Parallel checks per batch |
 
+## How This Fits With Reporium
+
+The Reporium platform already stores `ai_dev_skills` for 571 repos via reporium-api — that
+signal captures **what a repo does** (RAG, Agents, LLM Serving, etc.).
+
+repo-intelligence scores **how well it is maintained** — README quality, recent activity,
+community health, CI/CD. These are orthogonal signals:
+
+| Signal | Source | Answers |
+|--------|--------|---------|
+| `ai_dev_skills` | reporium-api | What does this repo do? |
+| `score` (0-100) | repo-intelligence | How well is it maintained? |
+
+Together they give two views on any repo. A high-starred project with ai_dev_skills="RAG"
+and score=30/100 (Grade D) tells you it's relevant but poorly maintained — worth knowing
+before you depend on it.
+
+**Example — vllm:**
+```
+vllm-project/vllm: 95/100 (Grade: A)
+  README:    25/25  check readme_exists check readme_500_chars check readme_2000_chars check readme_code_blocks check readme_badges
+  Activity:  25/25  check committed_30d check commits_gt_10 check has_releases
+  Community: 25/25  check has_license check has_contributing check issues_enabled check has_changelog_or_releases
+  CI:        20/25  check has_workflows check has_tests_dir
+```
+
+reporium-api tags vllm as `ai_dev_skills=["Inference & Serving"]`. repo-intelligence
+confirms it is actively maintained (committed in last 30 days, 10+ commits, releases,
+license, CI). Both signals together: high-quality, well-maintained LLM inference engine.
+
 ## How reporium-db Uses This
 
 reporium-db calls `score_repos_batch` nightly to score newly added or updated repos.
