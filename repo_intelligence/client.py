@@ -30,7 +30,7 @@ class GitHubClient:
     async def __aenter__(self) -> "GitHubClient":
         """Create the HTTP client if not provided."""
         if self._owns_client:
-            self._http = httpx.AsyncClient(timeout=15)
+            self._http = httpx.AsyncClient(timeout=15, follow_redirects=True)
         return self
 
     async def __aexit__(self, *_: object) -> None:
