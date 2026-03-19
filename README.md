@@ -18,10 +18,10 @@ repo-score tiangolo/fastapi
 Output:
 ```
 tiangolo/fastapi: 95/100 (Grade: A)
-  README:    25/25  check readme_exists check readme_500_chars check readme_2000_chars check readme_code_blocks check readme_badges
-  Activity:  20/25  check committed_30d check commits_gt_10 check has_releases
-  Community: 25/25  check has_license check has_contributing check issues_enabled check has_changelog_or_releases
-  CI:        25/25  check has_workflows check has_tests_dir check has_build_config
+  README:    25/25  ✓ exists ✓ >500 chars ✓ >2000 chars ✓ code blocks ✓ badges
+  Activity:  20/25  ✓ committed last 30d ✓ >10 commits ✓ releases ✗ —
+  Community: 25/25  ✓ license ✓ contributing ✓ issues enabled ✓ changelog
+  CI:        25/25  ✓ workflows ✓ tests ✓ build config
 ```
 
 ## Scoring Rubric
@@ -102,10 +102,10 @@ before you depend on it.
 **Example — vllm:**
 ```
 vllm-project/vllm: 95/100 (Grade: A)
-  README:    25/25  check readme_exists check readme_500_chars check readme_2000_chars check readme_code_blocks check readme_badges
-  Activity:  25/25  check committed_30d check commits_gt_10 check has_releases
-  Community: 25/25  check has_license check has_contributing check issues_enabled check has_changelog_or_releases
-  CI:        20/25  check has_workflows check has_tests_dir
+  README:    25/25  ✓ exists ✓ >500 chars ✓ >2000 chars ✓ code blocks ✓ badges
+  Activity:  25/25  ✓ committed last 30d ✓ >10 commits ✓ releases
+  Community: 25/25  ✓ license ✓ contributing ✓ issues enabled ✓ changelog
+  CI:        20/25  ✓ workflows ✓ tests ✗ build config
 ```
 
 reporium-api tags vllm as `ai_dev_skills=["Inference & Serving"]`. repo-intelligence
