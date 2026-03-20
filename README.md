@@ -1,5 +1,15 @@
 # repo-intelligence
 
+<!-- perditio-badges-start -->
+[![Tests](https://github.com/perditioinc/repo-intelligence/actions/workflows/test.yml/badge.svg)](https://github.com/perditioinc/repo-intelligence/actions/workflows/test.yml)
+![Last Commit](https://img.shields.io/github/last-commit/perditioinc/repo-intelligence)
+![License](https://img.shields.io/github/license/perditioinc/repo-intelligence)
+![python](https://img.shields.io/badge/python-3.11%2B-3776ab)
+![suite](https://img.shields.io/badge/suite-Reporium-6e40c9)
+![score range](https://img.shields.io/badge/score%20range-0--100-blue)
+![install](https://img.shields.io/badge/install-pip-blue)
+<!-- perditio-badges-end -->
+
 > Score any GitHub repo 0-100 across README quality, activity, community health, and CI/CD. Pip-installable.
 
 ## Install
