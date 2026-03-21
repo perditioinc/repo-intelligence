@@ -8,7 +8,7 @@ import httpx
 import pytest
 import respx
 
-from repo_intelligence.client import GITHUB_API
+from reporium_scoring.client import GITHUB_API
 
 OWNER = "test-owner"
 REPO = "test-repo"

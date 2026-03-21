@@ -1,9 +1,9 @@
-"""Tests for repo_intelligence.cli output format."""
+"""Tests for reporium_scoring.cli output format."""
 
 from __future__ import annotations
 
-from repo_intelligence.cli import _format_checks, _print_score, _tick
-from repo_intelligence.models import CheckResult, RepoScore
+from reporium_scoring.cli import _format_checks, _print_score, _tick
+from reporium_scoring.models import CheckResult, RepoScore
 
 
 def _make_score(total: int = 75, grade: str = "B", error: str | None = None) -> RepoScore:

@@ -7,11 +7,11 @@ import base64
 import httpx
 import respx
 
-from repo_intelligence.checks.activity import check_activity
-from repo_intelligence.checks.ci import check_ci
-from repo_intelligence.checks.community import check_community
-from repo_intelligence.checks.readme import check_readme
-from repo_intelligence.client import GITHUB_API, GitHubClient
+from reporium_scoring.checks.activity import check_activity
+from reporium_scoring.checks.ci import check_ci
+from reporium_scoring.checks.community import check_community
+from reporium_scoring.checks.readme import check_readme
+from reporium_scoring.client import GITHUB_API, GitHubClient
 
 OWNER = "test-owner"
 REPO = "test-repo"

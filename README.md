@@ -1,9 +1,9 @@
-# repo-intelligence
+# reporium-scoring
 
 <!-- perditio-badges-start -->
-[![Tests](https://github.com/perditioinc/repo-intelligence/actions/workflows/test.yml/badge.svg)](https://github.com/perditioinc/repo-intelligence/actions/workflows/test.yml)
-![Last Commit](https://img.shields.io/github/last-commit/perditioinc/repo-intelligence)
-![License](https://img.shields.io/github/license/perditioinc/repo-intelligence)
+[![Tests](https://github.com/perditioinc/reporium-scoring/actions/workflows/test.yml/badge.svg)](https://github.com/perditioinc/reporium-scoring/actions/workflows/test.yml)
+![Last Commit](https://img.shields.io/github/last-commit/perditioinc/reporium-scoring)
+![License](https://img.shields.io/github/license/perditioinc/reporium-scoring)
 ![python](https://img.shields.io/badge/python-3.11%2B-3776ab)
 ![suite](https://img.shields.io/badge/suite-Reporium-6e40c9)
 ![score range](https://img.shields.io/badge/score%20range-0--100-blue)
@@ -15,7 +15,7 @@
 ## Install
 
 ```bash
-pip install git+https://github.com/perditioinc/repo-intelligence.git
+pip install git+https://github.com/perditioinc/reporium-scoring.git
 ```
 
 ## Quick Start
@@ -64,7 +64,7 @@ tiangolo/fastapi: 95/100 (Grade: A)
 
 ```python
 import asyncio
-from repo_intelligence import score_repo, score_repos_batch
+from reporium_scoring import score_repo, score_repos_batch
 
 # Single repo
 score = asyncio.run(score_repo("tiangolo", "fastapi", token="ghp_..."))
@@ -97,13 +97,13 @@ huggingface/transformers: 90/100 (A)
 The Reporium platform already stores `ai_dev_skills` for 571 repos via reporium-api — that
 signal captures **what a repo does** (RAG, Agents, LLM Serving, etc.).
 
-repo-intelligence scores **how well it is maintained** — README quality, recent activity,
+reporium-scoring scores **how well it is maintained** — README quality, recent activity,
 community health, CI/CD. These are orthogonal signals:
 
 | Signal | Source | Answers |
 |--------|--------|---------|
 | `ai_dev_skills` | reporium-api | What does this repo do? |
-| `score` (0-100) | repo-intelligence | How well is it maintained? |
+| `score` (0-100) | reporium-scoring | How well is it maintained? |
 
 Together they give two views on any repo. A high-starred project with ai_dev_skills="RAG"
 and score=30/100 (Grade D) tells you it's relevant but poorly maintained — worth knowing
@@ -118,7 +118,7 @@ vllm-project/vllm: 95/100 (Grade: A)
   CI:        20/25  ✓ workflows ✓ tests ✗ build config
 ```
 
-reporium-api tags vllm as `ai_dev_skills=["Inference & Serving"]`. repo-intelligence
+reporium-api tags vllm as `ai_dev_skills=["Inference & Serving"]`. reporium-scoring
 confirms it is actively maintained (committed in last 30 days, 10+ commits, releases,
 license, CI). Both signals together: high-quality, well-maintained LLM inference engine.
 

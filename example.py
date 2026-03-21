@@ -5,7 +5,7 @@ from __future__ import annotations
 import asyncio
 import os
 
-from repo_intelligence import score_repo, score_repos_batch
+from reporium_scoring import score_repo, score_repos_batch
 
 
 async def single_repo_example() -> None:

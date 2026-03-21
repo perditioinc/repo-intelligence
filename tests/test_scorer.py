@@ -1,4 +1,4 @@
-"""Tests for repo_intelligence.scorer."""
+"""Tests for reporium_scoring.scorer."""
 
 from __future__ import annotations
 
@@ -7,8 +7,8 @@ import base64
 import httpx
 import respx
 
-from repo_intelligence.client import GITHUB_API
-from repo_intelligence.scorer import _grade, score_repo, score_repos_batch
+from reporium_scoring.client import GITHUB_API
+from reporium_scoring.scorer import _grade, score_repo, score_repos_batch
 
 OWNER = "test-owner"
 REPO = "test-repo"
